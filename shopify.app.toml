@@ -1,0 +1,33 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "a36391cd7179ec6fdae101595059423a"
+application_url = "https://focused-scott-incredible-andrew.trycloudflare.com"
+embedded = true
+name = "checkout-new"
+handle = "checkout-new-18"
+
+[webhooks]
+api_version = "2024-10"
+
+  [[webhooks.subscriptions]]
+  topics = [ "app/uninstalled" ]
+  uri = "/webhooks/app/uninstalled"
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_products"
+
+[auth]
+redirect_urls = [
+  "https://focused-scott-incredible-andrew.trycloudflare.com/auth/callback",
+  "https://focused-scott-incredible-andrew.trycloudflare.com/auth/shopify/callback",
+  "https://focused-scott-incredible-andrew.trycloudflare.com/api/auth/callback"
+]
+
+[pos]
+embedded = false
+
+[build]
+dev_store_url = "zeeper-store.myshopify.com"
+automatically_update_urls_on_dev = true
+include_config_on_deploy = true
