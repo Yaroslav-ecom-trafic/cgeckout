@@ -1133,7 +1133,7 @@
             }
             return dispatcher.useContext(Context);
           }
-          function useState2(initialState) {
+          function useState3(initialState) {
             var dispatcher = resolveDispatcher();
             return dispatcher.useState(initialState);
           }
@@ -1141,11 +1141,11 @@
             var dispatcher = resolveDispatcher();
             return dispatcher.useReducer(reducer, initialArg, init);
           }
-          function useRef2(initialValue) {
+          function useRef3(initialValue) {
             var dispatcher = resolveDispatcher();
             return dispatcher.useRef(initialValue);
           }
-          function useEffect2(create, deps) {
+          function useEffect4(create, deps) {
             var dispatcher = resolveDispatcher();
             return dispatcher.useEffect(create, deps);
           }
@@ -1928,15 +1928,15 @@
           exports.useContext = useContext3;
           exports.useDebugValue = useDebugValue;
           exports.useDeferredValue = useDeferredValue;
-          exports.useEffect = useEffect2;
+          exports.useEffect = useEffect4;
           exports.useId = useId;
           exports.useImperativeHandle = useImperativeHandle;
           exports.useInsertionEffect = useInsertionEffect;
           exports.useLayoutEffect = useLayoutEffect;
           exports.useMemo = useMemo2;
           exports.useReducer = useReducer;
-          exports.useRef = useRef2;
-          exports.useState = useState2;
+          exports.useRef = useRef3;
+          exports.useState = useState3;
           exports.useSyncExternalStore = useSyncExternalStore;
           exports.useTransition = useTransition;
           exports.version = ReactVersion;
@@ -19140,14 +19140,35 @@
   // node_modules/@shopify/ui-extensions/build/esm/surfaces/checkout/components/Banner/Banner.mjs
   var Banner = createRemoteComponent("Banner");
 
+  // node_modules/@shopify/ui-extensions/build/esm/surfaces/checkout/components/BlockSpacer/BlockSpacer.mjs
+  var BlockSpacer = createRemoteComponent("BlockSpacer");
+
   // node_modules/@shopify/ui-extensions/build/esm/surfaces/checkout/components/BlockStack/BlockStack.mjs
   var BlockStack = createRemoteComponent("BlockStack");
 
-  // node_modules/@shopify/ui-extensions/build/esm/surfaces/checkout/components/Checkbox/Checkbox.mjs
-  var Checkbox = createRemoteComponent("Checkbox");
+  // node_modules/@shopify/ui-extensions/build/esm/surfaces/checkout/components/Button/Button.mjs
+  var Button = createRemoteComponent("Button");
+
+  // node_modules/@shopify/ui-extensions/build/esm/surfaces/checkout/components/Form/Form.mjs
+  var Form = createRemoteComponent("Form");
+
+  // node_modules/@shopify/ui-extensions/build/esm/surfaces/checkout/components/Grid/Grid.mjs
+  var Grid = createRemoteComponent("Grid");
+
+  // node_modules/@shopify/ui-extensions/build/esm/surfaces/checkout/components/GridItem/GridItem.mjs
+  var GridItem = createRemoteComponent("GridItem");
+
+  // node_modules/@shopify/ui-extensions/build/esm/surfaces/checkout/components/PhoneField/PhoneField.mjs
+  var PhoneField = createRemoteComponent("PhoneField");
 
   // node_modules/@shopify/ui-extensions/build/esm/surfaces/checkout/components/Text/Text.mjs
   var Text = createRemoteComponent("Text");
+
+  // node_modules/@shopify/ui-extensions/build/esm/surfaces/checkout/components/TextField/TextField.mjs
+  var TextField = createRemoteComponent("TextField");
+
+  // node_modules/@shopify/ui-extensions/build/esm/surfaces/checkout/components/View/View.mjs
+  var View = createRemoteComponent("View");
 
   // node_modules/@shopify/ui-extensions-react/build/esm/surfaces/checkout/render.mjs
   var import_react6 = __toESM(require_react(), 1);
@@ -19480,17 +19501,44 @@ ${errorInfo.componentStack}`);
   // node_modules/@shopify/ui-extensions-react/build/esm/surfaces/checkout/components/Banner/Banner.mjs
   var Banner2 = createRemoteReactComponent(Banner);
 
+  // node_modules/@shopify/ui-extensions-react/build/esm/surfaces/checkout/components/BlockSpacer/BlockSpacer.mjs
+  var BlockSpacer2 = createRemoteReactComponent(BlockSpacer);
+
   // node_modules/@shopify/ui-extensions-react/build/esm/surfaces/checkout/components/BlockStack/BlockStack.mjs
   var BlockStack2 = createRemoteReactComponent(BlockStack);
 
-  // node_modules/@shopify/ui-extensions-react/build/esm/surfaces/checkout/components/Checkbox/Checkbox.mjs
-  var Checkbox2 = createRemoteReactComponent(Checkbox);
+  // node_modules/@shopify/ui-extensions-react/build/esm/surfaces/checkout/components/Button/Button.mjs
+  var Button2 = createRemoteReactComponent(Button, {
+    fragmentProps: ["overlay"]
+  });
+
+  // node_modules/@shopify/ui-extensions-react/build/esm/surfaces/checkout/components/Form/Form.mjs
+  var Form2 = createRemoteReactComponent(Form);
+
+  // node_modules/@shopify/ui-extensions-react/build/esm/surfaces/checkout/components/Grid/Grid.mjs
+  var Grid2 = createRemoteReactComponent(Grid);
+
+  // node_modules/@shopify/ui-extensions-react/build/esm/surfaces/checkout/components/GridItem/GridItem.mjs
+  var GridItem2 = createRemoteReactComponent(GridItem);
+
+  // node_modules/@shopify/ui-extensions-react/build/esm/surfaces/checkout/components/PhoneField/PhoneField.mjs
+  var PhoneField2 = createRemoteReactComponent(PhoneField, {
+    fragmentProps: ["accessory"]
+  });
 
   // node_modules/@shopify/ui-extensions-react/build/esm/surfaces/checkout/components/Text/Text.mjs
   var Text2 = createRemoteReactComponent(Text);
 
+  // node_modules/@shopify/ui-extensions-react/build/esm/surfaces/checkout/components/TextField/TextField.mjs
+  var TextField2 = createRemoteReactComponent(TextField, {
+    fragmentProps: ["accessory"]
+  });
+
+  // node_modules/@shopify/ui-extensions-react/build/esm/surfaces/checkout/components/View/View.mjs
+  var View2 = createRemoteReactComponent(View);
+
   // node_modules/@shopify/ui-extensions-react/build/esm/surfaces/checkout/hooks/api.mjs
-  var import_react12 = __toESM(require_react(), 1);
+  var import_react19 = __toESM(require_react(), 1);
 
   // node_modules/@shopify/ui-extensions-react/build/esm/surfaces/checkout/errors.mjs
   var CheckoutUIExtensionError = class extends Error {
@@ -19508,7 +19556,7 @@ ${errorInfo.componentStack}`);
 
   // node_modules/@shopify/ui-extensions-react/build/esm/surfaces/checkout/hooks/api.mjs
   function useApi(_target) {
-    const api = (0, import_react12.useContext)(ExtensionApiContext);
+    const api = (0, import_react19.useContext)(ExtensionApiContext);
     if (api == null) {
       throw new CheckoutUIExtensionError("You can only call this hook when running as a checkout UI extension.");
     }
@@ -19516,10 +19564,10 @@ ${errorInfo.componentStack}`);
   }
 
   // node_modules/@shopify/ui-extensions-react/build/esm/surfaces/checkout/hooks/subscription.mjs
-  var import_react13 = __toESM(require_react(), 1);
+  var import_react20 = __toESM(require_react(), 1);
   function useSubscription(subscription) {
-    const [, setValue] = (0, import_react13.useState)(subscription.current);
-    (0, import_react13.useEffect)(() => {
+    const [, setValue] = (0, import_react20.useState)(subscription.current);
+    (0, import_react20.useEffect)(() => {
       let didUnsubscribe = false;
       const checkForUpdates = (newValue) => {
         if (didUnsubscribe) {
@@ -19537,7 +19585,28 @@ ${errorInfo.componentStack}`);
     return subscription.current;
   }
 
+  // node_modules/@shopify/ui-extensions-react/build/esm/surfaces/checkout/hooks/buyer-journey.mjs
+  var import_react21 = __toESM(require_react(), 1);
+  function useBuyerJourneyIntercept(interceptor) {
+    const api = useApi();
+    if (!("buyerJourney" in api)) {
+      throw new ExtensionHasNoMethodError("buyerJourney", api.extension.target);
+    }
+    const interceptorRef = (0, import_react21.useRef)(interceptor);
+    interceptorRef.current = interceptor;
+    return (0, import_react21.useEffect)(() => {
+      const teardownPromise = api.buyerJourney.intercept((interceptorProps) => interceptorRef.current(interceptorProps));
+      return () => {
+        teardownPromise.then((teardown) => teardown()).catch(() => {
+        });
+      };
+    }, [api.buyerJourney]);
+  }
+
   // node_modules/@shopify/ui-extensions-react/build/esm/surfaces/checkout/hooks/attributes.mjs
+  function useAttributes() {
+    return useSubscription(useApi().attributes);
+  }
   function useApplyAttributeChange() {
     const api = useApi();
     if ("applyAttributeChange" in api) {
@@ -19547,19 +19616,19 @@ ${errorInfo.componentStack}`);
   }
 
   // node_modules/@shopify/ui-extensions-react/build/esm/surfaces/checkout/hooks/translate.mjs
-  var import_react14 = __toESM(require_react(), 1);
+  var import_react22 = __toESM(require_react(), 1);
   function useTranslate() {
     const {
       i18n
     } = useApi();
-    const translate = (0, import_react14.useCallback)((...args) => {
+    const translate = (0, import_react22.useCallback)((...args) => {
       const translation = i18n.translate(...args);
       if (!Array.isArray(translation)) {
         return translation;
       }
       return translation.map((part, index) => {
-        if (/* @__PURE__ */ (0, import_react14.isValidElement)(part)) {
-          return /* @__PURE__ */ (0, import_react14.cloneElement)(part, {
+        if (/* @__PURE__ */ (0, import_react22.isValidElement)(part)) {
+          return /* @__PURE__ */ (0, import_react22.cloneElement)(part, {
             key: index
           });
         }
@@ -19575,32 +19644,161 @@ ${errorInfo.componentStack}`);
   }
 
   // extensions/checkout-ui/src/Checkout.jsx
+  var import_react23 = __toESM(require_react());
   var import_jsx_runtime4 = __toESM(require_jsx_runtime());
   var Checkout_default = reactExtension("purchase.checkout.block.render", () => /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Extension, {}));
   function Extension() {
+    const [firstName, setFirstName] = (0, import_react23.useState)("");
+    const [lastName, setLastName] = (0, import_react23.useState)("");
+    const [phone, setPhone] = (0, import_react23.useState)("");
+    const [clientData, setClientData] = (0, import_react23.useState)(null);
+    const { attributes } = useAttributes();
+    const [attemptedSubmit, setAttemptedSubmit] = (0, import_react23.useState)(false);
     const translate = useTranslate();
-    const { extension: extension2 } = useApi();
     const instructions = useInstructions();
     const applyAttributeChange = useApplyAttributeChange();
+    const addAttributes = (data) => __async(this, null, function* () {
+      console.log("data editing", data);
+      try {
+        yield applyAttributeChange({
+          type: "updateAttribute",
+          key: "customer_first_name",
+          value: data.firstName
+        });
+        yield applyAttributeChange({
+          type: "updateAttribute",
+          key: "customer_last_name",
+          value: data.lastName
+        });
+        yield applyAttributeChange({
+          type: "updateAttribute",
+          key: "customer_phone",
+          value: data.phone
+        });
+        console.log("Attributes updated successfully");
+      } catch (error) {
+        console.error("Failed to update attributes:", error);
+      }
+    });
+    const intercept = useBuyerJourneyIntercept(
+      ({ canBlockProgress }) => {
+        console.log("Intercept check:", { canBlockProgress, clientData });
+        if (!canBlockProgress) {
+          return { behavior: "allow" };
+        }
+        setAttemptedSubmit(true);
+        if (clientData === null) {
+          return {
+            behavior: "block",
+            errors: [
+              {
+                message: "\u041F\u043E\u0436\u0430\u043B\u0443\u0439\u0441\u0442\u0430, \u0437\u0430\u043F\u043E\u043B\u043D\u0438\u0442\u0435 \u0432\u0441\u0435 \u043D\u0435\u043E\u0431\u0445\u043E\u0434\u0438\u043C\u044B\u0435 \u0434\u0430\u043D\u043D\u044B\u0435"
+              }
+            ]
+          };
+        }
+        console.log("intercept clientData", clientData);
+        return { behavior: "allow" };
+      }
+    );
     if (!instructions.attributes.canUpdateAttributes) {
       return /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Banner2, { title: "checkout-ui", status: "warning", children: translate("attributeChangesAreNotSupported") });
     }
-    return /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)(BlockStack2, { border: "dotted", padding: "tight", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Banner2, { title: "checkout-ui", children: translate("welcome", {
-        target: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Text2, { emphasis: "italic", children: extension2.target })
-      }) }),
-      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Checkbox2, { onChange: onCheckboxChange, children: translate("iWouldLikeAFreeGiftWithMyOrder") })
-    ] });
-    function onCheckboxChange(isChecked) {
-      return __async(this, null, function* () {
-        const result = yield applyAttributeChange({
-          key: "requestedFreeGift",
-          type: "updateAttribute",
-          value: isChecked ? "yes" : "no"
-        });
-        console.log("applyAttributeChange result", result);
-      });
+    function validateText(text) {
+      const textOnlyRegex = /^[A-Za-zА-Яа-яЁё]+$/;
+      const isValid = textOnlyRegex.test(text);
+      return {
+        isValid,
+        error: isValid ? null : "\u0412 \u043F\u043E\u043B\u0435 \u0418\u043C\u044F \u0438 \u0424\u0430\u043C\u0438\u043B\u0438\u044F \u0434\u043E\u0441\u0442\u0443\u043F\u043D\u044B \u0442\u043E\u043B\u044C\u043A\u043E \u0431\u0443\u043A\u0432\u044B"
+      };
     }
+    function validatePhone(phone2) {
+      const hasLetters = /[A-Za-zА-Яа-яЁё]/.test(phone2);
+      if (hasLetters) {
+        return {
+          isValid: false,
+          error: "\u041D\u043E\u043C\u0435\u0440 \u0442\u0435\u043B\u0435\u0444\u043E\u043D\u0430 \u043D\u0435 \u0434\u043E\u043B\u0436\u0435\u043D \u0441\u043E\u0434\u0435\u0440\u0436\u0430\u0442\u044C \u0431\u0443\u043A\u0432"
+        };
+      }
+      const phoneRegex = /^\+\d{12,}$/;
+      const cleanPhone = phone2.replace(/[\s\-]/g, "");
+      const isValid = phoneRegex.test(cleanPhone);
+      return {
+        isValid,
+        error: isValid ? null : "\u041D\u043E\u043C\u0435\u0440 \u0434\u043E\u043B\u0436\u0435\u043D \u043D\u0430\u0447\u0438\u043D\u0430\u0442\u044C\u0441\u044F \u0441 + \u0438 \u0441\u043E\u0434\u0435\u0440\u0436\u0430\u0442\u044C \u043C\u0438\u043D\u0438\u043C\u0443\u043C 12 \u0446\u0438\u0444\u0440"
+      };
+    }
+    const handleSubmit = () => {
+      const firstNameIsValid = validateText(firstName);
+      const lastNameIsValid = validateText(lastName);
+      const phoneIsValid = validatePhone(phone);
+      const validationArr = [firstNameIsValid, lastNameIsValid, phoneIsValid];
+      const errorMessage = validationArr.find((item) => !item.isValid);
+      const isValid = validationArr.every((item) => item.isValid);
+      if (!isValid) {
+        console.log("errorMessage", errorMessage);
+        return;
+      }
+      setClientData({
+        firstName,
+        lastName,
+        phone
+      });
+    };
+    (0, import_react23.useEffect)(() => {
+      if (clientData) {
+        addAttributes(clientData);
+      }
+    }, [clientData]);
+    const shouldShowError = (value, validationFn) => {
+      return (attemptedSubmit || value) && !validationFn(value).isValid;
+    };
+    return /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)(BlockStack2, { spacing: "base", children: [
+      attributes && attributes.length > 0 && /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)(BlockStack2, { spacing: "tight", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Text2, { children: "Current Attributes:" }),
+        attributes.map((attr) => /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)(Text2, { children: [
+          attr.key,
+          ": ",
+          attr.value
+        ] }, attr.key))
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)(Form2, { onSubmit: handleSubmit, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)(Grid2, { columns: ["50%", "50%"], spacing: "base", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(View2, { children: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(
+            TextField2,
+            {
+              label: "First name",
+              value: firstName,
+              onChange: setFirstName,
+              error: shouldShowError(firstName, validateText) ? validateText(firstName).error : null,
+              required: true
+            }
+          ) }),
+          /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(View2, { children: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(
+            TextField2,
+            {
+              label: "Last name",
+              value: lastName,
+              onChange: setLastName,
+              error: shouldShowError(lastName, validateText) ? validateText(lastName).error : null,
+              required: true
+            }
+          ) }),
+          /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(GridItem2, { columnSpan: 2, children: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(
+            PhoneField2,
+            {
+              label: "Phone",
+              value: phone,
+              onChange: setPhone,
+              error: shouldShowError(phone, validatePhone) ? validatePhone(phone).error : null,
+              required: true
+            }
+          ) })
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(BlockSpacer2, { spacing: "base" }),
+        /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Button2, { accessibilityRole: "submit", children: "Submit" })
+      ] })
+    ] });
   }
 })();
 //# sourceMappingURL=checkout-ui.js.map

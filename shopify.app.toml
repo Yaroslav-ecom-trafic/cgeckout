@@ -1,7 +1,7 @@
 # Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
 
 client_id = "a36391cd7179ec6fdae101595059423a"
-application_url = "https://focused-scott-incredible-andrew.trycloudflare.com"
+application_url = "https://pipeline-liberal-associations-deputy.trycloudflare.com"
 embedded = true
 name = "checkout-new"
 handle = "checkout-new-18"
@@ -19,9 +19,9 @@ scopes = "write_products"
 
 [auth]
 redirect_urls = [
-  "https://focused-scott-incredible-andrew.trycloudflare.com/auth/callback",
-  "https://focused-scott-incredible-andrew.trycloudflare.com/auth/shopify/callback",
-  "https://focused-scott-incredible-andrew.trycloudflare.com/api/auth/callback"
+  "https://pipeline-liberal-associations-deputy.trycloudflare.com/auth/callback",
+  "https://pipeline-liberal-associations-deputy.trycloudflare.com/auth/shopify/callback",
+  "https://pipeline-liberal-associations-deputy.trycloudflare.com/api/auth/callback"
 ]
 
 [pos]
